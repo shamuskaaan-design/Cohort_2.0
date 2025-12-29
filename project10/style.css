@@ -1,0 +1,92 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+@font-face {
+  font-family: myfonts;
+  src: url(Kugile_Demo.ttf);
+}
+
+html,body{
+  height:100%;
+  width:100%;
+  font-family:Helvetica;
+}
+
+#main #nav{
+  padding:30px 40px;
+}
+
+#main #nav a{
+  text-decoration: none;
+  font-size:20px;
+  color:black;
+  margin-left:20px;
+}
+
+#main>h1{
+  font-size: 300px;
+  padding-left:55px;
+  font-weight: 400;
+}
+
+#btmbar{
+  width:200px;
+  position: absolute;
+  bottom:15%;
+  left:5%;
+}
+
+#btmbar h3{
+  font-size: 25px;
+}
+
+#btmbar p{
+  margin-top:8px;
+}
+
+#btmbar h4{
+  font-size: 20px;
+  margin-top: 40px;
+}
+
+#lastbar{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width:100%;
+  height:40px;
+  position: absolute;
+  bottom:0;
+  left:0;
+  padding:30px 70px;
+}
+
+#lastbar a{
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+}
+
+#main>img{
+  position: absolute;
+  height:300px;
+}
+
+#main #first{
+  left:63%;
+  top:38%;
+  z-index:1;
+}
+
+#main #second{
+  left:53%;
+  top:60%;
+  z-index:0;
+}
+#main #third{
+  left:40%;
+  top:45%;
+}

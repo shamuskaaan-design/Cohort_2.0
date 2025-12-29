@@ -1,0 +1,69 @@
+@mixin background(){
+  background-position: center;
+  background-size: cover;
+}
+
+@mixin flexcenter(){
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  color:white;
+  font-size:2rem;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+html, body{
+  height:100%;
+  width:100%;
+}
+.main1{
+  height:100vh;
+  width:100vw;
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
+
+  grid-template-areas:"aside main main main"
+                      "aside bottom1 bottom2 bottom3";
+ gap:1rem;
+
+   .aside{
+    grid-area: aside;
+    background-image:url('https://images.unsplash.com/photo-1526512340740-9217d0159da9?q=80&w=700&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    @include background();
+    @include flexcenter();
+   }
+
+   .main{
+    grid-area: main;
+    background-image:url('https://plus.unsplash.com/premium_photo-1676218969835-0d0e89a12bc2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+     @include background();
+     @include flexcenter();
+   }
+   .bottom1{
+    grid-area: bottom1;
+    background-image:url('https://images.unsplash.com/photo-1505521377774-103a8cc2f735?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+     @include background();
+     @include flexcenter();
+   }
+
+   .bottom2{
+    grid-area: bottom2;
+    background-image:url('https://images.unsplash.com/photo-1530236668220-b9c6c098c9aa?q=80&w=715&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+     @include background();
+     @include flexcenter();
+   }
+
+   .bottom3{
+    grid-area:bottom3;
+    background-image:url('https://images.unsplash.com/photo-1544376798-89aa6b82c6cd?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+     @include background();
+     @include flexcenter();
+   }
+}
+

@@ -1,0 +1,122 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+html,body{
+  width:100%;
+  height:100%
+}
+
+#header{
+  background-color:rgb(2, 2, 84);
+  color:white;
+  height:300px;
+  width:100%;
+  text-align:center;
+  padding-top:100px;
+}
+
+#header h1{
+  font-size:40px;
+  margin-bottom:10px;
+  text-transform:capitalize;
+  font-weight: 200;
+}
+
+#header p{
+  font-size:20px;
+  font-weight: 100;
+}
+
+#about-me{
+  background-color:whitesmoke;
+  padding:50px;
+  width:80%;
+  margin:50px auto;
+  text-align:center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#about-me h2{
+  font-size:25px;
+  margin-bottom:20px;
+  text-align: center;
+  text-transform:capitalize;
+  font-weight:400;
+}
+
+#about-me p{
+  font-size:15px;
+  color:rgb(50, 50, 50);
+}
+
+.details{
+  width:80%;
+  background-color:rgb(210, 229, 237);
+  margin:40px auto;
+  text-align: center;
+  padding:40px;
+}
+
+.details h2{
+  font-size:25px;
+  margin-bottom:20px;
+  text-transform:capitalize;
+  font-weight:400;
+}
+
+.details div{
+  font-size:15px;
+  background-color: white;
+  padding:10px;
+  color:rgb(30, 30, 30);
+  margin: 10px 0;
+}
+
+.skills{
+  background-color: rgb(220, 224, 161);;
+}
+
+.projects{
+  background-color: rgb(207, 187, 226);
+}
+
+.contact{
+  background-color: rgb(219, 228, 206);
+}
+
+.contact-form{
+  background-color: rgb(172, 176, 196);
+  padding:50px;
+  margin:40px auto;
+  width:80%;
+  text-align: center;
+}
+
+.contact-form h2{
+  font-size:25px;
+  margin-bottom:20px;
+  text-transform:capitalize;
+  font-weight:400;
+}
+
+.contact-form input , .contact-form textarea{
+  width:80%;
+  padding:10px;
+  margin:10px 0;
+  border:1px solid rgb(180, 180, 180);
+  border-radius:5px;
+}
+
+.contact-form #button{
+  padding:10px 10px;
+  background-color:black;
+  color:white;
+  font-size: 15px;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+  width:20%
+}

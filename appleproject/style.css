@@ -1,0 +1,133 @@
+@font-face {
+  font-family:seb;
+  src: url(./sf-pro-icons_light.woff2);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+#main {
+  height: 100%;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  height: 45px;
+  background-color: rgb(32, 31, 31);
+}
+
+#nav h4 {
+  color: white;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 12px;
+}
+
+#center {
+  background-image: url("https://www.apple.com/v/home/ci/images/heroes/iphone-17-pro/hero_iphone_17_pro__bknyzxfk2agi_mediumtall_2x.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height:80%;
+  width:100%;
+  text-align: center;
+  color: white;
+  padding:50px;
+}
+
+#center h1 {
+  font-size: 50px;
+  font-weight:600;
+
+}
+
+#center h2{
+  font-weight:100;
+  font-size: 35px;
+}
+
+#links{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap:20px;
+  padding:20px;
+}
+
+
+#links button {
+  background-color: royalblue;
+  border: none;
+  padding: 12px 30px;
+  font-size: 18px;
+  color: white;
+  border-radius: 50px;
+  transition: all 0.2s ease-in;
+}
+
+#links button:hover {
+  background-color: transparent;
+  border: 2px solid royalblue;
+  cursor: pointer;
+  color: white;
+}
+
+.center2 {
+  background-image: url("apple01.jpg");
+  height:70%;
+  width:100%;
+  text-align: center;
+  color:black;
+  padding:50px;
+  margin-top:10px;
+}
+
+#center2 h1 {
+  font-size: 50px;
+  font-weight:600;
+
+}
+
+#center2 h2{
+  font-weight:100;
+  font-size: 25px;
+}
+
+#links{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap:20px;
+  padding:20px;
+}
+
+
+#links2 button {
+  background-color: royalblue;
+  border: none;
+  padding: 12px 30px;
+  font-size: 18px;
+  color: white;
+  border-radius: 50px;
+  transition: all 0.2s ease-in;
+}
+
+#links2 button:hover {
+  background-color: transparent;
+  border: 2px solid royalblue;
+  cursor: pointer;
+  color: white;
+}
+

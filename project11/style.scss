@@ -1,0 +1,422 @@
+@mixin button($bg-color: white, $color: #0468d7) {
+  width: fit-content;
+  padding: 1rem 1.8rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: $bg-color;
+  border: 1px solid #0468d7;
+  color: $color;
+}
+
+@mixin center($gap: 0) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: clamp(14px, 1vw, 18px);
+}
+
+section {
+  max-width: 2000px;
+}
+
+.main {
+  width: 100%;
+  @include center(0rem);
+  align-items: center;
+
+  .view1 {
+    width: 100%;
+    @include center(6rem);
+    padding: 3rem 2rem;
+    background: linear-gradient(35deg, #fcdde8, #f3fcff 60%);
+    text-align: center;
+
+    .hero {
+      @include center(3rem);
+
+      .top {
+        width: 100%;
+        @include center(4rem);
+
+        img {
+          width: 100%;
+        }
+      }
+      .bottom {
+        width: 100%;
+
+        h1 {
+          font-size: 2.8rem;
+          font-weight: 700;
+          line-height: 1;
+        }
+      }
+    }
+
+    .text {
+      h1 {
+        font-size: 2.2rem;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .view2 {
+    width: 100%;
+    padding: 2rem;
+    @include center(1rem);
+
+    .card {
+      @include center(1.8rem);
+      width: 100%;
+      justify-content: flex-start;
+
+      h2 {
+        border-top: 3px solid #e8eaed;
+        padding-top: 1.6rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+        opacity: 0.8;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .arrange {
+    width: 100%;
+    @include center(2rem);
+    align-items: center;
+
+    .view3 {
+      width: 100%;
+      padding: 2rem;
+      @include center(2rem);
+
+      .top,
+      .bottom {
+        width: 100%;
+      }
+
+      .top {
+        img {
+          width: 100%;
+        }
+      }
+
+      .bottom {
+        @include center(1.2rem);
+        margin-bottom: 3rem;
+
+        h3 {
+          font-size: 1.4rem;
+          opacity: 0.6;
+        }
+
+        h1 {
+          font-size: 2.8rem;
+        }
+        p {
+          font-size: 1.3rem;
+          opacity: 0.8;
+        }
+
+        .links {
+          @include center(1rem);
+
+          .btn-first {
+            @include button();
+          }
+
+          a {
+            text-decoration: none;
+            color: black;
+            text-align: center;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    .card2,
+    .card4 {
+      background: linear-gradient(35deg, #fcfce2 40%, #f5fbfe 90%);
+    }
+
+    .card2,
+    .card3,
+    .card4 {
+      .bottom {
+        .links {
+          .btn-1 {
+            @include button(#0468d7, white);
+          }
+        }
+      }
+    }
+  }
+
+  .view4 {
+    width: 100%;
+    padding: 2rem;
+    @include center(0);
+
+    .card {
+      display: grid;
+      grid-template-columns: 1fr;
+      height: 100%;
+      width: 100%;
+      margin: auto 0;
+      position: relative;
+      border-radius: 2.6rem;
+      background-color: #042449;
+      overflow: hidden;
+      padding: 7rem 4rem;
+      color: white;
+
+      .text {
+        z-index: 1;
+        h3 {
+          font-size: 3.2rem;
+          font-weight: 700;
+          margin-bottom: 1.6rem;
+        }
+
+        p {
+          font-size: 1.2rem;
+          margin-bottom: 1.6rem;
+        }
+
+        .links {
+          display: flex;
+          flex-direction: column;
+          gap: 0.8rem;
+
+          button {
+            @include button();
+          }
+
+          a {
+            margin-left: 6rem;
+            color: white;
+            text-decoration: none;
+          }
+        }
+      }
+
+      .media {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: auto;
+
+        img {
+          height: 100%;
+          bottom: auto;
+        }
+      }
+    }
+    .insert {
+      overflow: hidden;
+      background-color: #042449;
+    }
+  }
+
+  .view5 {
+    width: 100%;
+    padding: 3rem;
+    background-color: #f8f9fa;
+    @include center(5rem);
+    .footer {
+      @include center(2rem);
+
+      img {
+        max-width: 100%;
+        width: 110px;
+        height: auto;
+      }
+
+      .footer-links {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        .first {
+          @include center(0.6rem);
+          padding-left: 0.8rem;
+
+          h4 {
+            font-size: 1.2rem;
+          }
+
+          p {
+            font-size: 1.2rem;
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+
+    .icons{
+      display: flex;
+      gap:2rem;
+      font-size: 1.4rem;
+      align-items: center;
+      justify-content: center;
+      color:rgb(88, 87, 87);
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .main {
+    .view1 {
+      padding: 4rem 8rem;
+
+      .hero {
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 3rem;
+        margin: 0 auto;
+
+        .top,
+        .bottom {
+          width: 50%;
+        }
+
+        .bottom {
+          h1 {
+            font-size: 4rem;
+          }
+        }
+      }
+      .text {
+        h1 {
+          margin: 0 auto;
+        }
+      }
+    }
+
+    .view2 {
+      flex-direction: row;
+      padding: 2rem 8rem;
+    }
+
+    .arrange {
+      flex-direction: column;
+
+      .view3 {
+        flex-direction: row;
+        padding: 2rem 8rem;
+        gap: 4rem;
+        align-items: center;
+
+        .top {
+          width: 60%;
+        }
+        .bottom {
+          width: 40%;
+
+          h3 {
+            font-size: 1.7rem;
+            opacity: 0.6;
+          }
+
+          h1 {
+            font-size: 3.1rem;
+          }
+          p {
+            font-size: 1.5rem;
+            opacity: 0.8;
+          }
+
+          .links {
+            flex-direction: row;
+            align-items: center;
+
+            button {
+              font-size: 1.2rem;
+            }
+
+            a {
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+
+      .card2,
+      .card4 {
+        flex-direction: row-reverse;
+      }
+    }
+
+    .view4 {
+      padding: 6rem 8rem;
+
+      .card {
+        padding: 4rem;
+        grid-template-columns: 1fr 1fr;
+
+        .text {
+          .links {
+            flex-direction: row;
+            align-items: center;
+
+            a {
+              margin-left: 2rem;
+            }
+          }
+        }
+
+        .media {
+          right: 0;
+          height: 100%;
+
+          img {
+            position: absolute;
+            right: 0;
+          }
+        }
+      }
+    }
+
+    .view5 {
+      padding:4rem;
+
+      .footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .footer-links {
+          grid-template-columns: 1fr 1fr 1fr;
+          gap:4rem;
+        }
+      }
+
+      .icons{
+        justify-content: flex-start;
+      }
+    }
+  }
+}

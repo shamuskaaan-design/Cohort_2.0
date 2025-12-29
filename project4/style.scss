@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+@mixin center() {
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+
+@mixin button(){
+  padding:0.8em 1.2em;
+  font-size:1em;
+  border-radius:30px;
+  background-color:rgb(83, 82, 82);
+  border:none;
+  color:white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+}
+
+html{
+  font-size: clamp(16px, 1vh, 22px);
+}
+
+.main {
+  height: 100vh;
+  width: 100vw;
+}
+
+.navigation {
+  height: 10%;
+  width: 100%;
+  @include center();
+  gap:4rem;
+}
+
+.navigation h1 {
+  font-size:1.5em;
+  color:rgb(83, 82, 82);
+  margin:1rem;
+}
+
+.navigation .btn-1{
+  @include button();
+  margin:1rem;
+}
+
+.navigation a{
+  text-decoration: none;
+  color:black;
+  font-size: 1.2rem;
+}
+
+.hero{
+  background-image:url('./Task9.jpg.jpg');
+  background-position: center;
+  background-size:cover;
+  height:80vh;
+  width:100vw;
+  @include center();
+}
+
+.hero .text{
+  color:white;
+  height:50%;
+  width:60%;
+  margin: auto;
+  text-align: center;
+}
+
+.text h1{
+  font-size: 3rem;
+  margin:3rem;
+}
+
+.text p{
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.divs{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background-color:rgb(233, 230, 230);
+}
+
+.div1{
+ @include center();
+ flex-direction: column;
+ background-color: white;
+ padding:2rem;
+}
+
+.div1 h2{
+  font-size: 3em;
+  text-align: center;
+  margin-bottom:1rem;
+}
+.div1 p{
+  font-size: 1em;
+}
+
+.div1 button {
+  @include button();
+}
+
+.div2{
+  @include center();
+ flex-direction: column;
+ background-color: white;
+ padding:2rem;
+}
+
+.div2 img{
+  object-fit: cover;
+  max-width: 100%;
+}
+
+.hero2{
+  background-image: url('./Task94th.jpg');
+  background-position:top;
+  background-size: cover;
+  height:80vh;
+  width:100vw;
+  @include center();
+  flex-direction: column;
+  color:white;
+}
+
+.hero2 h3{
+  font-size: 3em;
+  margin-bottom:1em;
+}
+.hero2 p{
+  width:70%;
+  margin-bottom: 1em;
+}
+
+.hero2 button{
+  @include button();
+}
+
+footer{
+  height:8vh;
+  width:100%;
+  background-color: grey;
+  color:white;
+  @include center();
+  margin-top: 2em;
+}
+
+footer p{
+  font-size:1em;
+}
+
+@media (max-width:600px) {
+  html{
+    font-size: clamp(10px, 1vh, 16px);
+  }
+
+  .navigation{
+    gap:0.9rem;
+    height:8%;
+
+    .navigation a{
+      font-size: 0.8rem;
+    }
+    
+  }
+
+  .hero{
+    height:35vh;
+
+  .text{
+    h1{
+      font-size:2rem;
+      margin:0.8rem;
+    }
+    p{
+      font-size:0.8rem;
+    }
+  }
+}
+.divs{
+  grid-template-columns: 1fr;
+  gap:1.5rem;
+  padding:2rem 1.5rem;
+  align-items: stretch;
+  
+
+  .div1 h2{
+    font-size: 2.5rem;
+  }
+  .div1, .div2{
+    padding:1.5rem;
+    min-height: 250px;
+  }
+
+  .div2 img{
+    object-fit: cover;   /* keeps full image visible */
+    max-height: 250px;  
+  }
+}
+
+.hero2{
+  height:35vh;
+
+  h3{
+      font-size:2.5rem;
+      margin:0.8rem;
+  }
+}
+  footer{
+    height:5vh;
+    font-size:1.2rem;
+  }
+}
