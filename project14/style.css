@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+/* Main wrapper */
+.box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Glass card */
+.container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 3.5rem 3rem;
+  border-radius: 20px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  min-width: 300px;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+/* Counter number */
+.container h1 {
+  font-size: 4.8rem;
+  font-weight: 600;
+  color: #ffffff;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Bounce on click */
+.container h1.bump {
+  transform: scale(1.25);
+  color: #ffdd57;
+}
+
+/* Button container */
+.btn {
+  display: flex;
+  gap: 25px;
+}
+
+/* Buttons */
+.btn button {
+  padding: 1rem 2.5rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.btn button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 20px rgba(255, 75, 43, 0.8);
+}
+
+/* Click effect */
+.btn button:active {
+  transform: scale(0.95);
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+  .container {
+    padding: 3rem 2rem;
+  }
+  .container h1 {
+    font-size: 3.8rem;
+  }
+  .btn {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .btn button {
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */
