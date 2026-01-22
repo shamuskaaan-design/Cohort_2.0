@@ -3,7 +3,6 @@ let btn = document.querySelector("#btn");
 let main = document.querySelector("#main");
 
 let arr = [
-  [
   {
     team:"Chennai Super Kings",
     captain:"Ruturaj Gaikwad",
