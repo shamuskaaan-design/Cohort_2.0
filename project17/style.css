@@ -24,13 +24,18 @@ main {
   background-color: rgb(252, 135, 155);
 }
 main #btn {
-  padding: 0.8rem 1.8rem;
+  /*padding:0.8rem 1.8rem;
   font-size: 1rem;
-  border: none;
-  border-radius: 0.7rem;
-  cursor: pointer;
-  background-color: rgb(252, 206, 214);
-  font-family: "sans-serif";
+  border:none;
+  border-radius:0.7rem;
+  cursor:pointer;
+  background-color:rgb(252, 206, 214);
+  font-family: 'sans-serif';
+  */
+  width: 200px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease;
   position: relative;
@@ -42,6 +47,7 @@ main #btn:active {
 }
 main h1 {
   white-space: nowrap;
+  font-size: 1rem;
 }
 
 @media (min-width: 900px) {
