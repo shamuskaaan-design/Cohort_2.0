@@ -1,13 +1,13 @@
-let btn = document.querySelector("img");
+let btn = document.querySelector("button");
 let main = document.querySelector("main");
 
-let arr = ["i love you so much shonu","sorry shonu","you are the bestest mera baccha","you are my everything shonuu","sorry for everthing shonuu mere shahzade","jaanuuuu you are mine","you will be my mehram soon","you are lovely","sorry shonuu","YOU ARE MINEEEEEEEE SORRY SHONUUUU"];
+let arr = ["Keep moving forward","Trust the process","Believe in yourself","Stay kind always","Dream big daily","Silence speaks loudly","Choose peace daily","Never stop learning","Faith over fear","Progress over perfection"];
 
 btn.addEventListener("click", function() {
   
   let random = Math.floor(Math.random()*arr.length);
-  let T = Math.floor(Math.random()*70);
-  let L = Math.floor(Math.random()*70);
+  let T = Math.floor(Math.random()*80);
+  let L = Math.floor(Math.random()*80);
 
 
   let h1 = document.createElement("h1");
