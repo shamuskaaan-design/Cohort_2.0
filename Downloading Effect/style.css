@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
   font-family: "Segoe UI", Tahoma, sans-serif;
@@ -99,4 +100,23 @@ main {
 
 .btn:active {
   transform: scale(0.95);
+}
+
+@media (min-width: 900px) {
+  .card {
+    width: 400px;
+  }
+  .card p {
+    font-size: 1.2rem;
+  }
+  .card .outer {
+    height: 15px;
+  }
+  .card .bottom h1 {
+    font-size: 1.9rem;
+  }
+  .card .bottom .btn {
+    padding: 0.6rem 1.6rem;
+    font-size: 1rem;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -20,6 +20,9 @@ btn.addEventListener("click", () =>{
     clearInterval(int);
     btn.innerHTML = "Downloaded"
     btn.style.opacity= 0.8;
-    alert("Your file is downloaded");
   },a*100);
+
+  setTimeout(() =>{
+    alert("Your file is downloaded");
+  },a*102);
 })
