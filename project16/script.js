@@ -78,7 +78,7 @@ let arr = [
 btn.addEventListener("click", function(){
   let show = arr[Math.floor(Math.random() * arr.length)];
 
-  h1.innerText = show.team;
+  h1.innerText = `The name of team is ${show.team},The captain name is ${show.captain}, The numbers of trophy they won ${show.won}`;
   h1.style.backgroundColor = show.primary;
   main.style.backgroundColor = show.secondary;
 })
