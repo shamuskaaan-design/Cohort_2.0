@@ -17,6 +17,14 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  cursor: none;
+}
+main .myimg {
+  width: 30px;
+  position: absolute;
+  pointer-events: none;
+  z-index: 9;
 }
 main .card {
   width: 300px;
