@@ -1,12 +1,8 @@
-let audio = new Audio("./MYMAN.mp3");
-let sorry = new Audio("./sorry.mp3")
-let button = document.querySelector("button")
-let btn = document.querySelector("#btn")
+let main = document.querySelector("main");
+let cursor = document.querySelector("#cursor");
 
-btn.addEventListener("click" , function(){
-  audio.play();
-})
 
-button.addEventListener("click", function(){
-  sorry.play();
+main.addEventListener("mousemove", function(det){
+  cursor.style.left = det.x - 10 + "px";
+  cursor.style.top = det.y - 10 + "px";
 })

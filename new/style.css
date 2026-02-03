@@ -14,46 +14,22 @@ main {
   width: 100%;
   height: 100%;
   background-color: black;
+  cursor: none;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 main div {
-  background-color: white;
-  width: 300px;
-  border-radius: 0.75rem;
-  padding: 20px 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
+  border: 2px solid white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: fixed;
 }
-main div img {
-  width: 100%;
-  border-radius: 0.75rem;
-}
-main div h3 {
-  font-weight: 100;
-  font-size: 1rem;
-  text-align: center;
+main h1 {
+  font-size: 5rem;
   font-family: Arial, Helvetica, sans-serif;
-}
-main div button {
-  padding: 0.6rem 1.4rem;
-  background: linear-gradient(135deg, #166534, #22c55e);
-  font-size: 0.8rem;
-  border-radius: 0.8rem;
-  border: none;
-  color: white;
-  cursor: pointer;
-  box-shadow: 0 6px 15px rgba(34, 197, 94, 0.4);
-  transition: all 0.3s ease;
-}
-main div button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.6);
-}
-main div button:active {
-  transform: scale(0.95);
+  background: linear-gradient(90deg, #ff512f, #dd2476);
+  -webkit-background-clip: text;
+  color: transparent;
 }/*# sourceMappingURL=style.css.map */
