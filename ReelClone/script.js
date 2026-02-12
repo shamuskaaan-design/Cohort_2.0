@@ -1,7 +1,8 @@
 const reels = [
   {
+    ismuted: true,
     username: "aesthetic.soul",
-    likeCount: 12450,
+    likeCount: 1245,
     isLiked: true,
     commentCount: 342,
     caption: "Slow mornings & calm hearts ✨",
@@ -11,6 +12,7 @@ const reels = [
     isFollowed: true,
   },
   {
+    ismuted: true,
     username: "code.with.muskan",
     likeCount: 8920,
     isLiked: false,
@@ -22,6 +24,7 @@ const reels = [
     isFollowed: true,
   },
   {
+    ismuted: true,
     username: "daily.motivation",
     likeCount: 15670,
     isLiked: true,
@@ -33,8 +36,9 @@ const reels = [
     isFollowed: false,
   },
   {
+    ismuted: true,
     username: "islamic.reminders",
-    likeCount: 20340,
+    likeCount: 2030,
     isLiked: true,
     commentCount: 612,
     caption: "Trust Allah, He is the best planner 🤍",
@@ -44,6 +48,7 @@ const reels = [
     isFollowed: true,
   },
   {
+    ismuted: true,
     username: "travel.vibes",
     likeCount: 9780,
     isLiked: false,
@@ -55,8 +60,9 @@ const reels = [
     isFollowed: false,
   },
   {
+    ismuted: true,
     username: "foodie.diaries",
-    likeCount: 18450,
+    likeCount: 1450,
     isLiked: true,
     commentCount: 488,
     caption: "Because good food = good mood 🍕❤️",
@@ -66,6 +72,7 @@ const reels = [
     isFollowed: true,
   },
   {
+    ismuted: true,
     username: "minimal.life",
     likeCount: 6420,
     isLiked: false,
@@ -77,8 +84,9 @@ const reels = [
     isFollowed: false,
   },
   {
+    ismuted: true,
     username: "fitness.goalz",
-    likeCount: 11230,
+    likeCount: 1130,
     isLiked: true,
     commentCount: 305,
     caption: "No excuses. Just progress 💪",
@@ -88,6 +96,7 @@ const reels = [
     isFollowed: true,
   },
   {
+    ismuted: true,
     username: "creative.mind",
     likeCount: 7310,
     isLiked: false,
@@ -99,8 +108,9 @@ const reels = [
     isFollowed: false,
   },
   {
+    ismuted: true,
     username: "night.thoughts",
-    likeCount: 16540,
+    likeCount: 1640,
     isLiked: true,
     commentCount: 529,
     caption: "Some thoughts are only meant for late nights 🌙",
@@ -111,25 +121,32 @@ const reels = [
   },
 ];
 
-let sum = "";
+let allreels = document.querySelector(".all-reels");
 
-reels.forEach(function (elem) {
-  sum =
-    sum +
-    `<div class="reel">
-          <video autoplay loop muted src ="${elem.video}"></video>
+function addData() {
+  let sum = "";
+
+  reels.forEach(function (elem, index) {
+    sum =
+      sum +
+      `<div class="reel">
+          <video autoplay loop ${elem.ismuted ? "muted" : ""} src ="${elem.video}"></video>
+          <div class="mute" id=${index}>
+          ${elem.ismuted ? '<i class="ri-volume-mute-line"></i>' : '<i class="ri-volume-up-line"></i>'}
+
+      </div>
            <i id="like" class="ri-poker-hearts-fill"></i>
           <div class="bottom">
             <div class="user">
               <img src="${elem.userProfile}" alt="image2">
               <h4>${elem.username}</h4>
-              <button>${elem.isFollowed? "Unfollow" : "Follow"}</button>
+              <button id=${index} class="follow">${elem.isFollowed ? "Unfollow" : "Follow"}</button>
             </div>
             <h3>${elem.caption}</h3>
           </div>
           <div class="right">
-            <div class="like">
-              <h3 id="love-icon"><i class="ri-heart-line"></i></h3>
+            <div id=${index} class="like">
+              <h3 id="love-icon">${elem.isLiked ? '<i class="love ri-heart-3-fill"></i>' : '<i class="ri-heart-3-line"></i>'}</i></h3>
               <h6>${elem.likeCount}</h6>
             </div>
             <div class="comment">
@@ -145,59 +162,55 @@ reels.forEach(function (elem) {
             </div>
           </div>
         </div>`;
-});
-
-let allreels = document.querySelector(".all-reels");
-allreels.innerHTML = sum;
-
-let btn = document.querySelectorAll("button");
-
-btn.forEach(function (elem) {
-  elem.addEventListener("click", function () {
-
-    if (elem.innerHTML == "Follow") {
-         elem.innerHTML = "Following";
-    } 
-    else {
-      elem.innerHTML = "Follow";
-    }
   });
-});
 
-let likes = document.querySelectorAll(".ri-heart-line");
+  allreels.innerHTML = sum;
+}
 
-likes.forEach(function (elem) {
-  elem.addEventListener("click", function () {
+addData();
 
-    if (elem.classList.contains("ri-heart-line")) {
-      elem.classList.remove("ri-heart-line");
-      elem.classList.add("ri-heart-fill");
+window.addEventListener("scroll", function () {
+  let videos = document.querySelectorAll("video");
+
+  videos.forEach(function (video) {
+    let rect = video.getBoundingClientRect();
+
+    // If video is mostly visible on screen
+    if (rect.top >= 0 && rect.top < window.innerHeight / 2) {
+      video.play();
     } else {
-      elem.classList.remove("ri-heart-fill");
-      elem.classList.add("ri-heart-line");
+      video.pause();
+      video.muted = true; // stop sound also
     }
-
   });
 });
 
-let love = document.querySelector(".ri-poker-hearts-fill");
-let reel = document.querySelector("section");
+allreels.addEventListener("click", function (e) {
+  if (e.target.className == "like") {
+    if (!reels[e.target.id].isLiked) {
+      reels[e.target.id].likeCount++;
+      reels[e.target.id].isLiked = true;
+    } else {
+      reels[e.target.id].likeCount--;
+      reels[e.target.id].isLiked = false;
+    }
+  }
 
-reel.addEventListener("dblclick", function(){
- love.style.opacity = 1;
- love.style.transform = "translate(-50%, -50%) scale(1) rotate(0deg)";
+  if (e.target.className == "follow") {
+    if (!reels[e.target.id].isFollowed) {
+      reels[e.target.id].isFollowed = true;
+    } else {
+      reels[e.target.id].isFollowed = false;
+    }
+  }
 
+  if (e.target.className == "mute") {
+    if (!reels[e.target.id].ismuted) {
+      reels[e.target.id].ismuted = true;
+    } else {
+      reels[e.target.id].ismuted = false;
+    }
+  }
 
- setTimeout(function(){
-   love.style.transform = "translate(-50%, -700%) scale(1) rotate(60deg)";
-},900);
-
-setTimeout(function(){
-   love.style.opacity = 0;
-},1000);
-
-setTimeout(function(){
-    love.style.transform = "translate(-50%, -50%) scale(0) rotate(-60deg)";
-}, 1200);
-
-})
+  addData();
+});
