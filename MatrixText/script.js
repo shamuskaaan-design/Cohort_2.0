@@ -1,4 +1,4 @@
- let para = document.querySelector("h5");
+let para = document.querySelector("h5");
 let text = para.innerHTML;
 let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 let chararray = characters.split("");
